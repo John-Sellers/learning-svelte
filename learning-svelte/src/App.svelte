@@ -258,7 +258,7 @@ Selected Option: {option.join(", ")} -->
     <ComponentLifeCycle />
 {/if} -->
 
-<script>
+<!-- <script>
     import Example1 from "./Example1.svelte";
     import Example2 from "./Example2.svelte";
 
@@ -270,4 +270,45 @@ Selected Option: {option.join(", ")} -->
 {#if show}
     <Example1 />
     <Example2 />
+{/if} -->
+
+<!-- {#if} Block -->
+<!-- <script>
+    let condition1 = true;
+    let condition2 = true;
+    let condition3 = true;
+
+    function toggleCondition1() {
+        condition1 = !condition1;
+    }
+
+    function toggleCondition2() {
+        condition2 = !condition2;
+    }
+    function toggleCondition3() {
+        condition3 = !condition3;
+    }
+</script>
+
+<button on:click={toggleCondition1}>Condition: {condition1}</button>
+<button on:click={toggleCondition2}>Condition: {condition2}</button>
+<button on:click={toggleCondition3}>Condition: {condition3}</button>
+<hr />
+
+{#if condition1 && condition2}
+    <p>Condition 1 and 2 are true</p>
+    {#if condition3}
+        <div>Hello</div>
+        <p>Condition 3 is true</p>
+    {/if}
+{:else if condition1}
+    <p>Condition 1 is true</p>
+{:else if condition2}
+    <p>Condition 2 is true</p>
 {/if}
+
+<style>
+    hr {
+        background-color: white;
+    }
+</style> -->
