@@ -128,4 +128,11 @@
 <p>{count}</p>
 <button on:click={increment}>+</button>
 <button on:click={multiply}>Scale</button>
-<button on:click={doSomething}>Click Me</button> -->
+<button on:click={doSomething}>Click Me</button>
+
+<script>
+    import { tick } from "svelte";
+    import Input from "./Input.svelte";
+</script>
+
+<Input /> -->
