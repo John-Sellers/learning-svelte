@@ -182,3 +182,32 @@
 />
 
 <Profile name="Bill" status="Inactive" /> -->
+
+<!-- Class:Directives -->
+
+<!-- <script>
+    let profit = 0;
+
+    $: negative = profit < 0;
+    $: positive = profit > 0;
+    $: neutral = profit === 0;
+</script>
+
+<div class:negative class:positive class:neutral>
+    {profit}
+</div>
+
+<button on:click={() => profit--}>-</button>
+<button on:click={() => profit++}>+</button>
+
+<style>
+    .neutral {
+        color: yellow;
+    }
+    .positive {
+        color: green;
+    }
+    .negative {
+        color: red;
+    }
+</style> -->
