@@ -1,4 +1,4 @@
-<!-- Dynamic content using Svelte -->
+<!-- Dynamic Content Using Svelte -->
 
 <!-- <script>
     let content = "Hello World";
@@ -9,7 +9,7 @@
 
 <img src={imageUrl} alt="Svelte Logo" /> -->
 
-<!-- Reactivity using Svelte -->
+<!-- Reactivity Using Svelte -->
 <!-- <script>
     // How does Svelte know when to update the state?
     // 1. Assignment to a variable -> count = 10;
@@ -36,7 +36,7 @@
 <button on:click={reset}>Reset Count</button>
 <button on:click={increment}>Increment</button> -->
 
-<!-- Event listeners using Svelte -->
+<!-- Event Listeners Using Svelte -->
 <!-- <script>
     // A function can be used for the event listener or ternary operator
     function onClick() {
@@ -87,7 +87,7 @@
     }
 </script> -->
 
-<!-- Tick function in Svelte -->
+<!-- Tick Function In Svelte -->
 
 <!-- The `tick` function schedules a microtask to be run after the current execution context is done.
     This is useful when you want to defer the re-evaluation of reactive statements.
@@ -136,3 +136,32 @@
 </script>
 
 <Input /> -->
+
+<!-- Svelte Components & Props -->
+<!-- In Svelte, components are reusable parts of a web page. 
+    They can take in props (short for properties) that are passed
+    to them. These props are like arguments that are used to customize 
+    the component. Imagine a component like a TV that has settings (props) 
+    like the size of the screen, the color of the TV, and the channels 
+    it can display. You can pass these settings to the TV component to 
+    make it unique to your needs. The Svelte `<script>` tag is where you
+    define the props that the component can take in. The `export` keyword 
+    is used to make the props public so they can be passed to the component.
+    The props are then used in the component's HTML to display the customized settings. -->
+<!-- <script>
+    import Component from "./Component.svelte";
+
+    let name = "Svelte";
+
+    const obj = {
+        name: "Svelte",
+        email: "bNwz3@example.com",
+        age: 25,
+    };
+</script>
+
+<h1>Hello {name}!</h1>
+<Component {name} />
+<Component name="John" email="john@example.com" />
+<Component name={obj.name} email={obj.email} age={obj.age} />
+<Component {...obj} /> -->
