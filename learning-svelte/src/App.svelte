@@ -382,3 +382,56 @@ Selected Option: {option.join(", ")} -->
         <p>Loading...</p>
     {/each}
 </ul> -->
+
+<!-- {#await } Block -->
+<!-- <script>
+    let selectedBreed;
+    const breeds = ["african", "germanshepherd", "husky"];
+
+    let imageSrc;
+    let hasError = false;
+    let isFetching = false;
+
+    $: promise = getRandomDogImage(selectedBreed);
+
+    async function getRandomDogImage(breed) {
+        hasError = false;
+        isFetching = true;
+        try {
+            const response = await fetch(
+                `https://dog.ceo/api/breed/${breed}/images/random`,
+            );
+            const obj = await response.json();
+            imageSrc = obj.message;
+        } catch (error) {
+            hasError = true;
+        } finally {
+            isFetching = false;
+        }
+    }
+</script>
+
+<select bind:value={selectedBreed}>
+    {#each breeds as breed}
+        <option value={breed}>{breed}</option>
+    {/each}
+</select>
+
+<p>{selectedBreed}</p>
+
+{#if hasError}
+    <p>An error has occurred. Please try again later.</p>
+{:else}
+    {#await promise}
+        <p>Loading...</p>
+    {:then}
+        <img
+            src={imageSrc}
+            width="300px"
+            height="300px"
+            alt={`Picture of ${selectedBreed}`}
+        />
+    {:catch error}
+        <p>An error has occurred. Please try again later.</p>
+    {/await}
+{/if} -->
