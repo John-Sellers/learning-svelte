@@ -312,3 +312,21 @@ Selected Option: {option.join(", ")} -->
         background-color: white;
     }
 </style> -->
+
+<!-- {#each} Block -->
+<!-- <script>
+    let colors = ["red", "green", "blue"];
+
+    function addColor() {
+        colors = [...colors, "yellow"];
+    }
+</script>
+
+<button on:click={addColor}>Add Color</button>
+<ul>
+    {#each colors as color, index}
+        <li style="color: {color}; list-style-type: circle">{color} {index}</li>
+    {:else}
+        <p>Loading...</p>
+    {/each}
+</ul> -->
