@@ -225,3 +225,23 @@
 <input bind:value type="number" />
 <div>value: {value}</div>
 <button on:click={() => (value = 0)}>Reset</button> -->
+
+<!-- <script>
+    let option = [3]; // Initialize as an array
+</script>
+
+<label>
+    <input type="checkbox" bind:group={option} name="option" value="1" />1
+</label>
+<label>
+    <input type="checkbox" bind:group={option} name="option" value="2" />2
+</label>
+<label>
+    <input type="checkbox" bind:group={option} name="option" value="3" />3
+</label>
+<label>
+    <input type="checkbox" bind:group={option} name="option" value="4" />4
+</label>
+<button on:click={() => (option = [])}></button>
+
+Selected Option: {option.join(", ")} -->
