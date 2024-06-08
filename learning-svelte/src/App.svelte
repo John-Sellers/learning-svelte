@@ -435,3 +435,27 @@ Selected Option: {option.join(", ")} -->
         <p>An error has occurred. Please try again later.</p>
     {/await}
 {/if} -->
+
+<!-- {#key} Block -->
+
+<!-- {#key} Block
+    The {#key} block is used when the order of elements in an array changes.
+    It helps Svelte to efficiently update the DOM by identifying each element
+    with a unique key. It ensures that Svelte can update only the necessary
+    elements instead of re-rendering all elements.
+    
+    In the context of the {#key} block, the value inside the curly braces is the
+    key. This key is used to identify each element in the array. When the order
+    of elements changes, Svelte compares the keys to determine which elements
+    need to be updated.-->
+<!-- <script>
+    import { fade } from "svelte/transition";
+    let count = 0;
+</script>
+
+{#key count}
+    <input />
+    <div in:fade>{count}</div>
+{/key}
+
+<button on:click={() => count++}>+</button> -->
