@@ -86,3 +86,46 @@
         console.log(a, b, c);
     }
 </script> -->
+
+<!-- Tick function in Svelte -->
+
+<!-- The `tick` function schedules a microtask to be run after the current execution context is done.
+    This is useful when you want to defer the re-evaluation of reactive statements.
+    For example, if you want to update multiple state variables together, you can wrap them in a function
+    and then call `tick` to ensure that all the updates are batched together into a single re-render. -->
+
+<!-- <script>
+    import { tick } from "svelte";
+
+    let count = 0;
+
+    $: doubled = count * 2;
+
+    async function increment() {
+        count++;
+        await tick();
+        console.log("After tick:", doubled);
+    }
+
+    function decrement() {
+        count--;
+    }
+
+    function multiply() {
+        count = count * count;
+    }
+    function doSomething() {
+        console.log(doubled);
+    }
+
+    function reset() {
+        count = 0;
+    }
+</script>
+
+<button on:click={decrement}>-</button>
+<button on:click={reset}>Reset Count</button>
+<p>{count}</p>
+<button on:click={increment}>+</button>
+<button on:click={multiply}>Scale</button>
+<button on:click={doSomething}>Click Me</button> -->
