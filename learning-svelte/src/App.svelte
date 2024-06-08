@@ -165,3 +165,20 @@
 <Component name="John" email="john@example.com" />
 <Component name={obj.name} email={obj.email} age={obj.age} />
 <Component {...obj} /> -->
+
+<!-- Svelte Components Events -->
+<!-- <script>
+    import Profile from "./Profile.svelte";
+
+    function onSkillPointChanged(event) {
+        console.log("onSkillPointChanged", event.detail);
+    }
+</script>
+
+<Profile
+    name="John"
+    status="Active"
+    on:skillPointChanged={onSkillPointChanged}
+/>
+
+<Profile name="Bill" status="Inactive" /> -->
