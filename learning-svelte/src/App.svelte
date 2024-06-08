@@ -245,3 +245,29 @@
 <button on:click={() => (option = [])}></button>
 
 Selected Option: {option.join(", ")} -->
+
+<!-- Component Lifecycle -->
+<!-- <script>
+    import ComponentLifeCycle from "./ComponentLifeCycle.svelte";
+    let condition;
+</script>
+
+<input type="checkbox" bind:checked={condition} />
+
+{#if condition}
+    <ComponentLifeCycle />
+{/if} -->
+
+<script>
+    import Example1 from "./Example1.svelte";
+    import Example2 from "./Example2.svelte";
+
+    let show = false;
+</script>
+
+<input type="checkbox" bind:checked={show} />
+
+{#if show}
+    <Example1 />
+    <Example2 />
+{/if}
