@@ -330,3 +330,55 @@ Selected Option: {option.join(", ")} -->
         <p>Loading...</p>
     {/each}
 </ul> -->
+
+<!-- Keyed Each Block -->
+<!-- Keyed Each Block:
+    Keyed each blocks are used when the order of the elements in the array changes.
+    Svelte uses a unique key to identify each element and update the DOM efficiently.
+    If the order of the elements changes, Svelte will update the DOM instead of re-rendering all the elements.
+-->
+
+<script>
+    // Initialize an array named 'colors' with 3 random colors.
+    // Array.from({ length: 3 }) creates an array with 3 undefined elements.
+    // The second argument is a mapping function to generate a random color for each element.
+    let colors = Array.from({ length: 3 }, () => {
+        // Define a string containing all hexadecimal digits.
+        const letters = "0123456789ABCDEF";
+        // Initialize a string to hold the color value, starting with the '#' character.
+        let color = "#";
+        // Loop 6 times to generate a 6-digit hexadecimal color code.
+        for (let i = 0; i < 6; i++) {
+            // Append a random character from 'letters' to the 'color' string.
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        // Return the generated color.
+        return color;
+    });
+
+    // Function to add a new random color to the 'colors' array.
+    function addColor() {
+        // Define a string containing all hexadecimal digits.
+        const letters = "0123456789ABCDEF";
+        // Initialize a string to hold the color value, starting with the '#' character.
+        let color = "#";
+        // Loop 6 times to generate a 6-digit hexadecimal color code.
+        for (let i = 0; i < 6; i++) {
+            // Append a random character from 'letters' to the 'color' string.
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        // Create a new array that includes all existing colors and the new color.
+        colors = [...colors, color];
+    }
+</script>
+
+<button on:click={addColor}>Add Color</button>
+<ul>
+    {#each colors as color (color)}
+        <li style="color: {color}; list-style-type: circle">
+            {color} (key: {color})
+        </li>
+    {:else}
+        <p>Loading...</p>
+    {/each}
+</ul>
