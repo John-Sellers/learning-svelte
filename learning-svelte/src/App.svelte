@@ -218,10 +218,10 @@
     It allows you to bind a value from a component to a property of an input element.
     When the value of the input changes, it updates the value of the component's property.
     When the property is updated in the component, the value of the input is updated as well. -->
-<script>
+<!-- <script>
     let value = 0;
 </script>
 
 <input bind:value type="number" />
 <div>value: {value}</div>
-<button on:click={() => (value = 0)}>Reset</button>
+<button on:click={() => (value = 0)}>Reset</button> -->
