@@ -338,7 +338,7 @@ Selected Option: {option.join(", ")} -->
     If the order of the elements changes, Svelte will update the DOM instead of re-rendering all the elements.
 -->
 
-<script>
+<!-- <script>
     // Initialize an array named 'colors' with 3 random colors.
     // Array.from({ length: 3 }) creates an array with 3 undefined elements.
     // The second argument is a mapping function to generate a random color for each element.
@@ -381,4 +381,4 @@ Selected Option: {option.join(", ")} -->
     {:else}
         <p>Loading...</p>
     {/each}
-</ul>
+</ul> -->
