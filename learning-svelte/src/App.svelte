@@ -459,3 +459,42 @@ Selected Option: {option.join(", ")} -->
 {/key}
 
 <button on:click={() => count++}>+</button> -->
+
+<!-- Derived() Stores -->
+<!-- <script>
+    import { writable, derived } from "svelte/store";
+
+    const num = writable(10);
+    const num2 = writable(24);
+
+    // Derived from one store
+    const doubleOfNum = derived(num, ($num) => $num * 2);
+
+    // Derived from multiple stores
+    const productNum = derived([num, num2], ([$num, $num2]) => $num * $num2);
+
+    // Derive synchronously or asynchronously
+    const delayedNum = derived(
+        num,
+        ($num, set) => {
+            let timeoutId = setTimeout(() => {
+                set($num);
+            }, 500);
+            return () => {
+                clearTimeout(timeoutId);
+            };
+        },
+        "default",
+    );
+</script>
+
+<div>
+    <input bind:value={$num} type="number" />
+    {$num} * 2 = {$doubleOfNum}
+    {$delayedNum}
+</div>
+
+<div>
+    <input bind:value={$num2} type="number" />
+    {$num} * {$num2} = {$productNum}
+</div> -->
